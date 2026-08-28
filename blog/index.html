@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing | Shavonda Lawson</title>
+<meta name="description" content="Essays and reflections from Shavonda Lawson on early childhood education, building schools as villages, and the work of raising confident, capable children.">
+<meta name="author" content="Shavonda Lawson">
+<meta name="theme-color" content="#F4FAF8">
+<link rel="canonical" href="https://shavondalawson.com/blog/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shavonda Lawson">
+<meta property="og:title" content="Writing | Shavonda Lawson">
+<meta property="og:description" content="Essays and reflections on early childhood education, building schools as villages, and the work of raising confident, capable children.">
+<meta property="og:url" content="https://shavondalawson.com/blog/">
+<meta property="og:image" content="https://shavondalawson.com/headshot.jpg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Writing | Shavonda Lawson">
+<meta name="twitter:description" content="Essays and reflections on early childhood education, building schools as villages, and the work of raising confident, capable children.">
+<meta name="twitter:image" content="https://shavondalawson.com/headshot.jpg">
+
+<style>
+  :root {
+    --ink: #435C5F;
+    --ink-soft: #5A7275;
+    --bg: #F4FAF8;
+    --surface: #FFFFFF;
+    --accent: #EBA35E;
+    --accent-deep: #C97F36;
+    --accent-tint: rgba(235, 163, 94, 0.20);
+    --secondary: #3793CB;
+    --rule: rgba(67, 92, 95, 0.14);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 42.5rem; /* ~680px */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  h1, h2 {
+    font-family: var(--serif);
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  a {
+    color: var(--ink);
+    text-decoration: none;
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 2px;
+    padding-bottom: 1px;
+    transition: background-size 0.18s ease, background-color 0.18s ease;
+  }
+  a:hover {
+    background-size: 100% 100%;
+    background-color: var(--accent-tint);
+  }
+  a:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- Top navigation ---------- */
+  .topnav { padding: 1.75rem 0 0; }
+  .topnav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .topnav a {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- Page head ---------- */
+  .page-head { padding: 3rem 0 0; }
+  .page-head h1 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    margin-bottom: 1.25rem;
+  }
+  .page-head .intro {
+    font-size: 1.09rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin: 0 0 2rem;
+    max-width: 34rem;
+  }
+
+  .flourish {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+  .flourish span {
+    display: block;
+    height: 3px;
+    width: 34px;
+    background: var(--accent);
+    border-radius: 3px;
+  }
+  .flourish i {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--secondary);
+  }
+
+  /* ---------- Post list ---------- */
+  .posts {
+    list-style: none;
+    margin: 0;
+    padding: 2.5rem 0 0;
+  }
+  .posts li {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px 14px 14px 4px;
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 1.15rem;
+  }
+  .posts li:last-child { margin-bottom: 0; }
+
+  .posts .date {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.6rem;
+  }
+  .posts h2 {
+    font-size: 1.42rem;
+    margin-bottom: 0.5rem;
+  }
+  .posts .excerpt {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--ink);
+    color: var(--bg);
+    margin-top: 4rem;
+    padding: 3rem 0 3.25rem;
+  }
+  footer .rule {
+    height: 3px;
+    width: 34px;
+    border-radius: 3px;
+    background: var(--accent);
+    margin-bottom: 1.75rem;
+  }
+  footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  footer a {
+    color: var(--bg);
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-size: 100% 2px;
+  }
+  footer a:hover {
+    color: var(--ink);
+    background-size: 100% 100%;
+    background-color: var(--accent);
+  }
+  footer a:focus-visible { outline-color: var(--accent); }
+  footer .copyright {
+    margin: 0;
+    font-size: 0.88rem;
+    color: rgba(244, 250, 248, 0.75);
+  }
+
+  @media (min-width: 44em) {
+    .wrap { padding: 0 2.5rem; }
+    .page-head { padding: 4rem 0 0; }
+    .posts li { padding: 1.75rem 2rem; }
+    footer { padding: 3.5rem 0 3.75rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="Primary">
+  <div class="wrap">
+    <a href="../index.html">Shavonda Lawson</a>
+    <a href="index.html">Writing</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Writing</h1>
+      <div class="flourish" aria-hidden="true"><span></span><i></i><span></span></div>
+      <p class="intro">Notes from the classroom and the long road of building schools &mdash; on early childhood, leadership, and the village it takes.</p>
+    </header>
+
+    <ol class="posts">
+      <li>
+        <span class="date"><time datetime="2026-08-28">August 28, 2026</time></span>
+        <h2><a href="love-doesnt-need-a-translator.html">Love Doesn&rsquo;t Need a Translator</a></h2>
+        <p class="excerpt">Stumbling into childcare in Japan, and learning that connection never needed a shared language.</p>
+      </li>
+    </ol>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"></div>
+    <nav class="links" aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/shavonda-lawson-706127b3/">LinkedIn</a>
+      <a href="https://www.nestatandersonmill.com">The Nest</a>
+      <a href="mailto:hello@shavondalawson.com">hello@shavondalawson.com</a>
+    </nav>
+    <p class="copyright">&copy; 2026 Shavonda Lawson</p>
+  </div>
+</footer>
+
+</body>
+</html>
