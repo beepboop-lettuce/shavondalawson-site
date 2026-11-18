@@ -214,12 +214,14 @@
   }
   .service-grid .num {
     position: absolute;
-    top: -0.35em;
-    right: 0.1em;
+    top: 0.5rem;
+    right: 1.1rem;
     font-family: var(--serif);
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     font-weight: 600;
-    line-height: 1;
+    /* line-height 1.1 keeps the full glyph inside the card's clipping box
+       so the tops of the numerals are never cut off */
+    line-height: 1.1;
     color: var(--teal-light);
     pointer-events: none;
     user-select: none;
