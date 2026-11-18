@@ -6,7 +6,7 @@
 <title>Classroom Comeback | Shavonda Lawson</title>
 <meta name="description" content="From one classroom to an entire school, we help education work the way it should. Partnering with owners, operators, and philanthropists on school design, operations, and education reform.">
 <meta name="author" content="Shavonda Lawson">
-<meta name="theme-color" content="#F4FAF8">
+<meta name="theme-color" content="#435C5F">
 <link rel="canonical" href="https://shavondalawson.com/classroom-comeback.html">
 
 <!-- Open Graph -->
@@ -35,6 +35,7 @@
   "slogan": "From one classroom to an entire school, we help education work the way it should.",
   "description": "Consulting and partnership for anyone working to improve education, from a single learning environment to school design to education reform at the policy level.",
   "url": "https://shavondalawson.com/classroom-comeback.html",
+  "email": "hello@shavondalawson.com",
   "founder": {
     "@type": "Person",
     "name": "Shavonda Lawson",
@@ -45,14 +46,15 @@
 
 <style>
   :root {
+    --teal: #435C5F;
+    --teal-deep: #35494C;
+    --teal-light: rgba(67, 92, 95, 0.12);
+    --mint: #F4FAF8;
+    --blue: #3793CB;
+    --accent: #EBA35E;
     --ink: #435C5F;
     --ink-soft: #5A7275;
-    --bg: #F4FAF8;
-    --surface: #FFFFFF;
-    --accent: #EBA35E;
-    --accent-deep: #C97F36;
-    --accent-tint: rgba(235, 163, 94, 0.20);
-    --secondary: #3793CB;
+    --white: #FFFFFF;
     --rule: rgba(67, 92, 95, 0.14);
     --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -64,7 +66,7 @@
 
   body {
     margin: 0;
-    background: var(--bg);
+    background: var(--white);
     color: var(--ink);
     font-family: var(--sans);
     font-size: 1.0625rem;
@@ -72,24 +74,28 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .wrap {
-    width: 100%;
-    max-width: 42.5rem; /* ~680px */
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  h1, h2, h3 {
+  h1, h2, h3, blockquote {
     font-family: var(--serif);
-    color: var(--ink);
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.01em;
     margin: 0;
   }
 
+  p { margin: 0 0 1.15rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* 16px side gutter on mobile, roomier on wider screens */
+  .wrap {
+    width: 100%;
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .narrow { max-width: 650px; margin-left: auto; margin-right: auto; }
+
   a {
-    color: var(--ink);
+    color: inherit;
     text-decoration: none;
     background-image: linear-gradient(var(--accent), var(--accent));
     background-repeat: no-repeat;
@@ -100,16 +106,16 @@
   }
   a:hover {
     background-size: 100% 100%;
-    background-color: var(--accent-tint);
+    background-color: rgba(235, 163, 94, 0.2);
   }
   a:focus-visible {
-    outline: 3px solid var(--secondary);
+    outline: 3px solid var(--blue);
     outline-offset: 3px;
     border-radius: 2px;
   }
 
-  /* ---------- Top navigation ---------- */
-  .topnav { padding: 1.75rem 0 0; }
+  /* ---------- Top navigation (site standard) ---------- */
+  .topnav { padding: 1.75rem 0 0; background: var(--mint); }
   .topnav .wrap {
     display: flex;
     align-items: center;
@@ -123,107 +129,202 @@
     text-transform: uppercase;
   }
 
-  /* ---------- Page head ---------- */
-  .page-head { padding: 3rem 0 0; }
-  .page-head h1 {
-    font-size: clamp(2rem, 7vw, 2.8rem);
-    margin-bottom: 1rem;
+  /* ---------- 1. Hero ---------- */
+  .hero {
+    background: var(--teal);
+    color: var(--white);
+    padding: 4rem 0 4.5rem;
+    text-align: center;
   }
-  .tagline {
-    font-size: 1.18rem;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    margin: 0 0 1.5rem;
+  .hero h1 {
+    color: var(--white);
+    font-size: clamp(2.2rem, 7.5vw, 3.8rem);
+    margin-bottom: 1.25rem;
   }
-
+  .hero .tagline {
+    font-size: clamp(1.05rem, 3vw, 1.35rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.86);
+    max-width: 40rem;
+    margin: 0 auto;
+  }
   .flourish {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.6rem;
-    margin: 0 0 1rem;
+    margin: 0 0 1.5rem;
   }
   .flourish span {
     display: block;
     height: 3px;
-    width: 34px;
-    background: var(--accent);
+    width: 38px;
     border-radius: 3px;
+    background: var(--accent);
   }
   .flourish i {
     display: block;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: var(--secondary);
+    background: var(--blue);
   }
 
-  /* ---------- Body sections ---------- */
-  .page-body { padding-bottom: 1rem; }
-
-  .page-body h2 {
-    font-size: 1.55rem;
-    margin: 2.75rem 0 1.4rem;
+  /* ---------- 2. Intro ---------- */
+  .intro {
+    background: var(--white);
+    padding: 4rem 0;
+    text-align: center;
   }
-  .page-body h2::after {
-    content: "";
-    display: block;
-    width: 34px;
-    height: 3px;
-    border-radius: 3px;
-    background: var(--accent);
-    margin-top: 0.85rem;
+  .intro h2 {
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    margin-bottom: 1.5rem;
+  }
+  .intro p {
+    font-size: 1.12rem;
+    line-height: 1.85;
   }
 
-  .page-body p {
-    font-size: 1.125rem;
-    line-height: 1.9;
-    margin: 0 0 1.35em;
+  /* ---------- 3. Service cards ---------- */
+  .services {
+    background: var(--mint);
+    padding: 4rem 0;
   }
-  .page-body p:last-child { margin-bottom: 0; }
-
-  /* ---------- Audience list ---------- */
-  .audience {
+  .service-grid {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
   }
-  .audience li {
+  .service-grid li {
     position: relative;
-    padding-left: 1.6rem;
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 0.9rem;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 2.5rem 1.6rem 1.75rem;
+    box-shadow: 0 14px 30px -24px rgba(67, 92, 95, 0.6);
   }
-  .audience li:last-child { margin-bottom: 0; }
-  .audience li::before {
-    content: "";
+  .service-grid .num {
     position: absolute;
-    left: 0;
-    top: 0.85em;
-    width: 14px;
-    height: 3px;
-    border-radius: 3px;
-    background: var(--accent);
-  }
-
-  /* ---------- Back link ---------- */
-  .page-foot {
-    margin: 3.25rem 0 0;
-    padding-top: 2rem;
-    border-top: 1px solid var(--rule);
-  }
-  .page-foot p {
-    margin: 0;
-    font-size: 0.9rem;
+    top: -0.35em;
+    right: 0.1em;
+    font-family: var(--serif);
+    font-size: 5.5rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    line-height: 1;
+    color: var(--teal-light);
+    pointer-events: none;
+    user-select: none;
+  }
+  .service-grid h3 {
+    position: relative;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+  .service-grid p {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
   }
 
-  /* ---------- Footer ---------- */
+  /* ---------- 4. Pull quote ---------- */
+  .quote-band {
+    background: var(--teal);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .quote-band .mark {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--accent);
+    margin: 0 auto 2rem;
+  }
+  .quote-band blockquote {
+    color: var(--white);
+    font-size: clamp(1.35rem, 4vw, 2.1rem);
+    line-height: 1.35;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  /* ---------- 5. Who we serve ---------- */
+  .serve {
+    background: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .serve h2 {
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    margin-bottom: 2rem;
+  }
+  .tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .tags li {
+    background: rgba(55, 147, 203, 0.09);
+    border: 1px solid rgba(55, 147, 203, 0.35);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0.65rem 1.35rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- 6. CTA ---------- */
+  .cta {
+    background: var(--mint);
+    padding: 4rem 0 4.5rem;
+    text-align: center;
+  }
+  .cta h2 {
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    margin-bottom: 1.25rem;
+  }
+  .cta p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--teal);
+    background-image: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    padding: 0.95rem 2.1rem;
+    border-radius: 999px;
+    transition: background-color 0.18s ease, transform 0.18s ease;
+  }
+  .btn:hover {
+    background: var(--teal-deep);
+    background-image: none;
+    color: var(--white);
+    transform: translateY(-1px);
+  }
+  .btn:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+  }
+
+  /* ---------- Footer (site standard) ---------- */
   footer {
-    background: var(--ink);
-    color: var(--bg);
-    margin-top: 4rem;
+    background: var(--teal);
+    color: var(--mint);
     padding: 3rem 0 3.25rem;
   }
   footer .rule {
@@ -241,12 +342,12 @@
     margin-bottom: 1.75rem;
   }
   footer a {
-    color: var(--bg);
+    color: var(--mint);
     background-image: linear-gradient(var(--accent), var(--accent));
     background-size: 100% 2px;
   }
   footer a:hover {
-    color: var(--ink);
+    color: var(--teal);
     background-size: 100% 100%;
     background-color: var(--accent);
   }
@@ -257,10 +358,20 @@
     color: rgba(244, 250, 248, 0.75);
   }
 
-  @media (min-width: 44em) {
-    .wrap { padding: 0 2.5rem; }
-    .page-head { padding: 4rem 0 0; }
-    footer { padding: 3.5rem 0 3.75rem; }
+  /* ---------- Wider screens ---------- */
+  @media (min-width: 40em) {
+    .wrap { padding: 0 2rem; }
+  }
+
+  @media (min-width: 60em) {
+    .hero { padding: 5.5rem 0 6rem; }
+    .intro, .services, .quote-band, .serve { padding: 5rem 0; }
+    .cta { padding: 5rem 0 5.5rem; }
+    .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-grid li { padding: 3rem 1.9rem 2rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -278,50 +389,84 @@
 </nav>
 
 <main>
-  <div class="wrap">
-    <header class="page-head">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="wrap">
       <h1>Classroom Comeback</h1>
       <p class="tagline">From one classroom to an entire school, we help education work the way it should.</p>
-      <div class="flourish" aria-hidden="true"><span></span><i></i><span></span></div>
-    </header>
-
-    <div class="page-body">
-      <h2>What We Do</h2>
-
-      <p>Classroom Comeback began as a consulting service that revives classrooms, and it has grown into something larger: a partner for anyone working to improve education, from a single learning environment to school design to education reform at the policy level.</p>
-
-      <h2>Build a School From the Ground Up</h2>
-
-      <p>Opening a school is one of the most complex undertakings in education, and most people attempt it exactly once. We walk with owners, operators, and philanthropists through the entire journey: concept and program design, licensing and regulatory navigation, facility planning and classroom design, staffing models, enrollment, and operations. We are not a construction firm. We are the partner who makes sure the school being built actually works for children, educators, and the people funding it.</p>
-
-      <h2>Strengthen an Existing School</h2>
-
-      <p>For operators already in the field, we provide the expert support this industry rarely offers: classroom redesign, staff training, operational systems, compliance readiness, and the honest outside perspective that helps a good school become an excellent one. Whether you have never operated in this space or have run schools for years, we meet you where you are.</p>
-
-      <h2>Advocate for Better Systems</h2>
-
-      <p>Our experience operating schools, navigating regulation, and building programs informs our work beyond individual campuses. We engage in conversations about education reform, including at the government level, because the people closest to classrooms should have a voice in the systems that govern them.</p>
-
-      <h2>Who We Serve</h2>
-
-      <ul class="audience">
-        <li>School owners and founders.</li>
-        <li>Philanthropists and investors entering education.</li>
-        <li>Childcare and Montessori operators.</li>
-        <li>Organizations and leaders working to improve how education is designed, regulated, and delivered.</li>
-      </ul>
-
-      <div class="page-foot">
-        <p><a href="index.html">&larr; Back to shavondalawson.com</a></p>
-      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- 2. INTRO -->
+  <section class="intro" aria-labelledby="intro-heading">
+    <div class="wrap narrow">
+      <div class="flourish" aria-hidden="true"><span></span><i></i><span></span></div>
+      <h2 id="intro-heading">What We Do</h2>
+      <p>Classroom Comeback began as a consulting service that revives classrooms, and it has grown into something larger: a partner for anyone working to improve education, from a single learning environment to school design to education reform at the policy level.</p>
+    </div>
+  </section>
+
+  <!-- 3. SERVICES -->
+  <section class="services" aria-label="Services">
+    <div class="wrap">
+      <ul class="service-grid">
+        <li>
+          <span class="num" aria-hidden="true">01</span>
+          <h3>Build a School From the Ground Up</h3>
+          <p>Opening a school is one of the most complex undertakings in education, and most people attempt it exactly once. We walk with owners, operators, and philanthropists through the entire journey: concept and program design, licensing and regulatory navigation, facility planning and classroom design, staffing models, enrollment, and operations. We are the partner who makes sure the school being built actually works for children, educators, and the people funding it.</p>
+        </li>
+        <li>
+          <span class="num" aria-hidden="true">02</span>
+          <h3>Strengthen an Existing School</h3>
+          <p>For operators already in the field, we provide the expert support this industry rarely offers: classroom redesign, staff training, operational systems, compliance readiness, and the honest outside perspective that helps a good school become an excellent one. Whether you have never operated in this space or have run schools for years, we meet you where you are.</p>
+        </li>
+        <li>
+          <span class="num" aria-hidden="true">03</span>
+          <h3>Advocate for Better Systems</h3>
+          <p>Our experience operating schools, navigating regulation, and building programs informs our work beyond individual campuses. We engage in conversations about education reform, including at the government level, because the people closest to classrooms should have a voice in the systems that govern them.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. PULL QUOTE -->
+  <section class="quote-band">
+    <div class="wrap">
+      <div class="mark" aria-hidden="true"></div>
+      <blockquote>The people closest to classrooms should have a voice in the systems that govern them.</blockquote>
+    </div>
+  </section>
+
+  <!-- 5. WHO WE SERVE -->
+  <section class="serve" aria-labelledby="serve-heading">
+    <div class="wrap">
+      <h2 id="serve-heading">Who We Serve</h2>
+      <ul class="tags">
+        <li>School owners and founders</li>
+        <li>Philanthropists entering education</li>
+        <li>Childcare and Montessori operators</li>
+        <li>Leaders improving education systems</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. CTA -->
+  <section class="cta" aria-labelledby="cta-heading">
+    <div class="wrap narrow">
+      <h2 id="cta-heading">Start the Conversation</h2>
+      <p>Whether you are opening your first school, strengthening one you already run, or working to improve the systems around them, we would love to hear from you.</p>
+      <a class="btn" href="mailto:hello@shavondalawson.com">Get in Touch</a>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="rule" aria-hidden="true"></div>
     <nav class="links" aria-label="Elsewhere">
+      <a href="index.html">Shavonda Lawson</a>
       <a href="https://www.linkedin.com/in/shavonda-lawson-706127b3/">LinkedIn</a>
       <a href="https://www.nestatandersonmill.com">The Nest</a>
       <a href="mailto:hello@shavondalawson.com">hello@shavondalawson.com</a>
