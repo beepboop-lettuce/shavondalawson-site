@@ -49,17 +49,21 @@
 }
 </script>
 
-<style>
-  :root {
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>  :root {
     --ink: #435C5F;
     --ink-soft: #5A7275;
     --bg: #F4FAF8;
     --accent: #EBA35E;
     --accent-deep: #C97F36;
     --accent-tint: rgba(235, 163, 94, 0.20);
+    --amber-text: #A8601F;
     --secondary: #3793CB;
     --rule: rgba(67, 92, 95, 0.14);
-    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --serif: "Lora", Georgia, "Times New Roman", serif;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
@@ -75,13 +79,14 @@
     font-size: 1.0625rem;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   .wrap {
     width: 100%;
     max-width: 42.5rem; /* ~680px */
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   h1, h2 {
@@ -137,16 +142,16 @@
   }
 
   .eyebrow {
-    font-size: 0.74rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--ink-soft);
-    margin: 0 0 1rem;
+    color: var(--amber-text);
+    margin: 1.1rem 0 0;
   }
 
   .post-head h1 {
-    font-size: clamp(1.95rem, 6.5vw, 2.6rem);
+    font-size: clamp(2rem, 6.8vw, 2.9rem);
     margin-bottom: 1.25rem;
   }
 
@@ -179,21 +184,52 @@
 
   .post-body p {
     font-size: 1.125rem;
-    line-height: 1.9;
-    margin: 0 0 1.35em;
+    line-height: 1.75;
+    margin: 0 0 1.6em;
   }
   .post-body p:last-child { margin-bottom: 0; }
 
   .post-foot {
-    margin: 3.25rem 0 0;
-    padding-top: 2rem;
+    margin: 3.5rem 0 0;
+    padding-top: 2.25rem;
     border-top: 1px solid var(--rule);
   }
-  .post-foot p {
-    margin: 0;
-    font-size: 0.9rem;
+  .post-foot .more {
+    margin: 0 0 1.75rem;
+    font-family: var(--serif);
+    font-size: 1.22rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: -0.01em;
+  }
+  .post-foot .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .post-foot .author .avatar {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    flex: none;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .post-foot .author .avatar img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.8);
+    transform-origin: 41% 0;
+  }
+  .post-foot .author p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
   }
 
   /* ---------- Footer ---------- */
@@ -257,8 +293,8 @@
 <main>
   <article class="post wrap">
     <header class="post-head">
-      <p class="eyebrow"><time datetime="2026-10-22">October 22, 2026</time></p>
       <h1>They Know My Name, But They Don&rsquo;t Know My Story</h1>
+      <p class="eyebrow"><time datetime="2026-10-22">October 22, 2026</time></p>
       <p class="byline">By Shavonda Lawson</p>
       <div class="flourish" aria-hidden="true"><span></span><i></i><span></span></div>
     </header>
@@ -358,7 +394,11 @@
     </div>
 
     <div class="post-foot">
-      <p><a href="index.html">&larr; All writing</a></p>
+      <p class="more"><a href="index.html">More from the CEO Diaries &rarr;</a></p>
+      <div class="author">
+        <span class="avatar" aria-hidden="true"><img src="../headshot.jpg" alt="" width="64" height="64"></span>
+        <p>Shavonda Lawson is the Co-Founder and CEO of The Nest, a Cognia-accredited network of Montessori schools in Central Texas.</p>
+      </div>
     </div>
   </article>
 </main>
