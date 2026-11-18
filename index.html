@@ -157,7 +157,8 @@
   .hero { background: var(--mint); padding: 2.5rem 0 3.5rem; }
   .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
 
-  .portrait-frame { position: relative; max-width: 360px; margin: 0 auto; }
+  /* capped so the 14px amber offset still clears the 16px gutter on phones */
+  .portrait-frame { position: relative; max-width: 300px; margin: 0 auto; }
   .portrait-frame::before {
     content: "";
     position: absolute;
@@ -225,6 +226,28 @@
 
   /* ---------- 3. About ---------- */
   .about { background: var(--white); padding: 4rem 0; }
+  .about-grid { display: grid; gap: 2.75rem; align-items: center; }
+  .about-text { max-width: 680px; }
+  /* photo sits right, mirroring rather than copying the reference layout */
+  .about-figure { position: relative; max-width: 300px; margin: 0 auto; }
+  .about-figure::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(14px, 14px);
+    border: 2px solid var(--amber);
+    border-radius: 18px;
+  }
+  .about-figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 18px;
+    background: var(--mint);
+  }
   .about .eyebrow { color: var(--amber-text); }
   .about h2 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin-bottom: 1.75rem; }
   .about p { font-size: 1.08rem; line-height: 1.85; margin-bottom: 1.4rem; }
@@ -371,6 +394,9 @@
   @media (min-width: 60em) {
     .hero { padding: 3.5rem 0 5rem; }
     .hero-grid { grid-template-columns: 0.85fr 1.15fr; gap: 4rem; }
+    .portrait-frame { max-width: 360px; }
+    .about-grid { grid-template-columns: 1.15fr 0.85fr; gap: 4rem; }
+    .about-figure { max-width: 340px; margin: 0 0 0 auto; }
     .journey, .about, .ventures-section, .diaries, .press { padding: 5rem 0; }
     .ventures, .posts { grid-template-columns: repeat(3, 1fr); }
     .posts { grid-template-columns: repeat(3, 1fr); }
@@ -432,7 +458,8 @@
 
   <!-- 3. ABOUT -->
   <section class="about" id="about" aria-labelledby="about-heading">
-    <div class="wrap narrow">
+    <div class="wrap about-grid">
+      <div class="about-text">
       <p class="eyebrow">About</p>
       <h2 id="about-heading">About</h2>
 
@@ -445,6 +472,11 @@
       <p>Beyond the classroom, Shavonda is the co-founder of Nest Paint, a coloring book brand encouraging creative expression in children, and she mentors aspiring childcare owners with the resources and business tools to build sustainable, enriching programs. She is a mom, a planner enthusiast, and a builder of systems that support women, educators, and families.</p>
 
       <p>Her mission has never changed: impact, integrity, and love. Building something beautiful, for the children and for the future.</p>
+      </div>
+
+      <figure class="about-figure">
+        <img src="about.jpg" alt="Shavonda Lawson smiling on a staircase, one hand resting on the railing" width="933" height="1400">
+      </figure>
     </div>
   </section>
 
