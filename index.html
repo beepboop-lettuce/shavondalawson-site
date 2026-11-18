@@ -328,6 +328,36 @@
     line-height: 1.65;
   }
 
+  /* A card that links somewhere: the title holds the link, and its ::after
+     stretches over the whole card so the entire card is clickable. The
+     resting appearance stays identical to the non-linked cards. */
+  .ventures li.linked {
+    position: relative;
+    transition: box-shadow 0.18s ease;
+  }
+  .ventures .card-link,
+  .ventures .card-link:hover {
+    background-image: none;
+    background-color: transparent;
+    padding-bottom: 0;
+  }
+  .ventures .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .ventures li.linked:hover {
+    box-shadow: 0 10px 24px -18px rgba(67, 92, 95, 0.6);
+  }
+  .ventures li.linked:hover .card-link,
+  .ventures li.linked:focus-within .card-link {
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 2px;
+    padding-bottom: 1px;
+  }
+
   /* ---------- Press ---------- */
   .press h2 {
     font-size: clamp(1.6rem, 5vw, 2rem);
@@ -472,8 +502,8 @@
           <p class="role">Founder</p>
           <p>Supporting aspiring childcare owners with the tools to build sustainable, enriching programs.</p>
         </li>
-        <li>
-          <h3>Wingspan Opportunity Foundation</h3>
+        <li class="linked">
+          <h3><a class="card-link" href="wingspan.html">Wingspan Opportunity Foundation</a></h3>
           <p class="role">Co-Founder</p>
           <p>A nonprofit helping students across Texas gain access to Montessori education through scholarships and community support.</p>
         </li>
